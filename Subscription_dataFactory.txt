@@ -1,0 +1,17 @@
+@isTest
+public with sharing class Subscription_dataFactory {
+	
+	
+	 public static SBQQ_Subscription_c createSubscription(integer TotalQuantity,
+	                                                        String ProcessCompliance ){
+	
+	        SBQQ_Subscriptionc result = new SBQQSubscription_c(
+	        SBQQ_Quantity_c = TotalQuantity,
+			ComplianceProcess__c = ProcessCompliance);
+	
+	        insert result;
+			return result;
+	
+
+     		}
+	}
